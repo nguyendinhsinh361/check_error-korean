@@ -1,0 +1,318 @@
+{
+  "1": {
+    "column": "text_question",
+    "content": "Cấu trúc điền: Đâu là \"Nghĩa tiếng Việt\"?"
+  },
+  "2": {
+    "column": "text_question",
+    "content": "Viết bằng tiếng Hàn"
+  },
+  "3": {
+    "column": "text_question",
+    "content": "Có thể gắn thẻ p"
+  },
+  "4": {
+    "column": "text_question",
+    "content": "Chỉ xuất hiện 1 chữ hán"
+  },
+  "5": {
+    "column": "text_question",
+    "content": "Xuất hiện từ 2 chữ hán trở lên"
+  },
+  "6": {
+    "column": "text_question",
+    "content": "Viết bằng tiếng Việt"
+  },
+  "7": {
+    "column": "text_question",
+    "content": "Cấu trúc điền: Dịch \"Nghĩa tiếng Việt\""
+  },
+  "8": {
+    "column": "text_question",
+    "content": "Có chứa 1 ()"
+  },
+  "9": {
+    "column": "text_question",
+    "content": "Có chứa các ()"
+  },
+  "10": {
+    "column": "romaja_question",
+    "content": "Khớp với cột text_question"
+  },
+  "11": {
+    "column": "romaja_question",
+    "content": "Khớp với cột text_question"
+  },
+  "12": {
+    "column": "mean_question",
+    "content": "Viết bằng tiếng Việt"
+  },
+  "13": {
+    "column": "audio",
+    "content": "Viết bằng tiếng Hàn"
+  },
+  "14": {
+    "column": "audio",
+    "content": "Không có <p></p> hay <h></h>"
+  },
+  "15": {
+    "column": "audio",
+    "content": "Giống với text question (bỏ <p></p> nếu có)"
+  },
+  "16": {
+    "column": "image",
+    "content": "Mô tả về hình ảnh"
+  },
+  "17": {
+    "column": "answer",
+    "content": "2 hoặc 4 đáp án khác nhau"
+  },
+  "18": {
+    "column": "answer",
+    "content": "Viết bằng tiếng Hàn"
+  },
+  "19": {
+    "column": "answer",
+    "content": "Max 4 đáp án khác nhau"
+  },
+  "20": {
+    "column": "answer",
+    "content": "Viết bằng tiếng Việt"
+  },
+  "21": {
+    "column": "answer",
+    "content": "Chứa đủ các từ/cụm từ ở cột correct_answer"
+  },
+  "22": {
+    "column": "answer",
+    "content": "Cho phép có thêm các từ/cụm từ gây nhiễu"
+  },
+  "23": {
+    "column": "answer",
+    "content": "Không có dấu \".\" hết câu, không viết hoa đầu câu (trừ khi là tên riêng)"
+  },
+  "24": {
+    "column": "answer",
+    "content": "Trật tự các dòng không được giống hệt correct_answer"
+  },
+  "25": {
+    "column": "answer",
+    "content": "Trong số các đáp án, phải có đáp án giống hệt audio (chấp nhận trường hợp answer có dấu chấm hết câu mà audio không có)"
+  },
+  "26": {
+    "column": "answer",
+    "content": "1 đáp án giống audio"
+  },
+  "27": {
+    "column": "answer",
+    "content": "Mỗi dòng chứa 1 chữ cái đơn hoặc chữ cái ghép trong tiếng Hàn"
+  },
+  "28": {
+    "column": "answer",
+    "content": "Chứa đủ các chữ ở cột correct_answer"
+  },
+  "29": {
+    "column": "answer",
+    "content": "Cho phép có thêm các chữ gây nhiễu"
+  },
+  "30": {
+    "column": "answer",
+    "content": "Không có bất kỳ dấu câu nào"
+  },
+  "31": {
+    "column": "answer",
+    "content": "Max 4 đáp án, các đáp án phải khác nhau"
+  },
+  "32": {
+    "column": "answer",
+    "content": "Cấu trúc điền: (text)"
+  },
+  "33": {
+    "column": "answer",
+    "content": "Ngắt thành nhiều dòng"
+  },
+  "34": {
+    "column": "answer",
+    "content": "Không viết hoa chữ cái đầu của dòng đầu tiên"
+  },
+  "35": {
+    "column": "answer",
+    "content": "Không có dấu \".\" hết câu"
+  },
+  "36": {
+    "column": "romaja_answer",
+    "content": "Khớp với cột answer"
+  },
+  "37": {
+    "column": "romaja_answer",
+    "content": "Khớp với cột answer"
+  },
+  "38": {
+    "column": "Image_answer",
+    "content": "2 hoặc 4 ảnh"
+  },
+  "39": {
+    "column": "corect_answer",
+    "content": "Đáp án dạng số"
+  },
+  "40": {
+    "column": "corect_answer",
+    "content": "Viết bằng tiếng Việt"
+  },
+  "41": {
+    "column": "corect_answer",
+    "content": "Ngắt thành nhiều dòng"
+  },
+  "42": {
+    "column": "corect_answer",
+    "content": "Có thể có nhiều cách ghép, các cách ghép ngăn cách nhau bằng ###"
+  },
+  "43": {
+    "column": "corect_answer",
+    "content": "Viết bằng tiếng Hàn"
+  },
+  "44": {
+    "column": "corect_answer",
+    "content": "Đáp án dạng số (trùng với stt của đáp án giống audio)"
+  },
+  "45": {
+    "column": "corect_answer",
+    "content": "Khi ghép lại thành 1 dòng thì trùng với audio"
+  },
+  "46": {
+    "column": "corect_answer",
+    "content": "Mỗi dòng chứa 1 chữ cái đơn hoặc chữ cái ghép trong tiếng Hàn"
+  },
+  "47": {
+    "column": "corect_answer",
+    "content": "text được điền vào 1 trong các () và phải khớp với text ở cột answer"
+  },
+  "48": {
+    "column": "explain",
+    "content": "Khớp với đáp án ở cột answer mà tương ứng theo correct answer"
+  },
+  "49": {
+    "column": "explain",
+    "content": "Khớp với đáp án ở cột romanja_answer mà tương ứng theo correct answer"
+  },
+  "50": {
+    "column": "explain",
+    "content": "Nghĩa phải giống với text_question"
+  },
+  "51": {
+    "column": "explain",
+    "content": "Giống với text question (bỏ <p></p> nếu có)"
+  },
+  "52": {
+    "column": "explain",
+    "content": "Giống với romaja_question (bỏ <p></p> nếu có)"
+  },
+  "53": {
+    "column": "explain",
+    "content": "Khớp với đáp án tương ứng theo correct answer"
+  },
+  "54": {
+    "column": "explain",
+    "content": "Tương ứng theo correct answer (ghép thành 1 dòng)"
+  },
+  "55": {
+    "column": "explain",
+    "content": "Số lượng explain bằng số lượng cách ghép"
+  },
+  "56": {
+    "column": "explain",
+    "content": "Khớp với correct_answer khi ghép lại thành 1 dòng"
+  },
+  "57": {
+    "column": "explain",
+    "content": "Hình thức romaja khớp với correct_answer khi ghép lại thành 1 dòng"
+  },
+  "58": {
+    "column": "explain",
+    "content": "Nghĩa viết bằng tiếng Việt"
+  },
+  "59": {
+    "column": "explain",
+    "content": "Giống với audio"
+  },
+  "60": {
+    "column": "explain",
+    "content": "Khớp với romaja_answer tương ứng theo correct_answer"
+  },
+  "61": {
+    "column": "explain",
+    "content": "Khớp với text_question (bỏ <p></p> nếu có)"
+  },
+  "62": {
+    "column": "explain",
+    "content": "Hình thức romaja của audio"
+  },
+  "63": {
+    "column": "explain",
+    "content": "Khớp với đáp án tương ứng với correct_answer"
+  },
+  "64": {
+    "column": "explain",
+    "content": "Viết bằng tiếng Hàn, tương ứng với biểu hiện kanji của correct answer (ghép thành 1 dòng)"
+  },
+  "65": {
+    "column": "explain",
+    "content": "Tương ứng theo correct answer (ghép thành 1 dòng)"
+  },
+  "66": {
+    "column": "explain",
+    "content": "Nghĩa tiếng Việt khớp với ô text_question"
+  },
+  "67": {
+    "column": "explain",
+    "content": "Câu hoàn chỉnh khi ghép đáp án tương ứng với correct_answer vào vị trí của () ở text_question, bỏ thẻ p nếu có"
+  },
+  "68": {
+    "column": "explain",
+    "content": "Câu hoàn chỉnh khi ghép đáp án  ở cột romanja_answer tương ứng với correct_answer vào vị trí của () ở romaja_question, bỏ thẻ p nếu có"
+  },
+  "69": {
+    "column": "explain",
+    "content": "Nghĩa tiếng Việt"
+  },
+  "70": {
+    "column": "explain",
+    "content": "Câu hoàn chỉnh khi ghép \"text\" ở cột answer vào câu ở text_question theo như correct_answer"
+  },
+  "71": {
+    "column": "explain",
+    "content": "Câu hoàn chỉnh khi ghép \"text\" ở cột romanja_answer vào câu ở romaja_question theo như correct_answer"
+  },
+  "72": {
+    "column": "explain",
+    "content": "Khớp với text_question  (bỏ <p></p> nếu có)"
+  },
+  "73": {
+    "column": "explain",
+    "content": "Khớp khi nội dung cột answer được viết thành 1 dòng và bỏ đi text ở dòng tương ứng với correct_answer"
+  },
+  "74": {
+    "column": "explain",
+    "content": "Khớp khi nội dung cột romanja_answer được viết thành 1 dòng và bỏ đi text ở dòng tương ứng với correct_answer"
+  },
+  "75": {
+    "column": "explain",
+    "content": "(Hình thức romaja khớp với correct_answer khi ghép lại thành 1 dòng"
+  },
+  "76": {
+    "column": "explain",
+    "content": "Khớp với text_question  (bỏ <p></p> nếu có)"
+  },
+  "77": {
+    "column": "explain",
+    "content": "Số lượng explain bằng số lượng cách ghép"
+  },
+  "78": {
+    "column": "explain_grammar",
+    "content": "Nếu text_question có <p></p> thì phải điền explain_grammar."
+  },
+  "79": {
+    "column": "explain_grammar",
+    "content": "Số lượng giải thích tương ứng với số lượng <p></p>"
+  }
+}
