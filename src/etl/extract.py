@@ -21,7 +21,23 @@ def extract_data():
     sheet = client.open(GGSHEET_TITLE)
     worksheets = sheet.worksheets()
     sheet_names = [sheet.title for
-                   sheet in worksheets if common.is_number(sheet.title[0]) and (sheet.title == "81_Học tập (2)")]
+                   sheet in worksheets if common.is_number(sheet.title[0]) and (
+                       sheet.title == "81_Học tập (2)" or 
+                       sheet.title == "82_Kế hoạch (2)" or 
+                       sheet.title == "83_Thay đổi" or 
+                       sheet.title == "84_Mối quan hệ (2)" or 
+                       sheet.title == "85_Hỏi thăm" or
+                       sheet.title == "86_Họp mặt" or
+                       sheet.title == "87_Giúp đỡ" or
+                       sheet.title == "88_Kết quả" or
+                       sheet.title == "89_Sức khỏe" or 
+                       sheet.title == "90_Khuyên nhủ" or 
+                       sheet.title == "91_Bệnh tật" or 
+                       sheet.title == "92_Trang phục" or 
+                       sheet.title == "93_Mua sắm" or 
+                       sheet.title == "94_Yêu cầu" or 
+                       sheet.title == "95_Món ăn"
+                    )]
     chunk_size = 30
     seperate_sheets = [sheet_names[i:i+chunk_size]
                        for i in range(0, len(sheet_names), chunk_size)]

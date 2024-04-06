@@ -22,7 +22,7 @@ from src.modules.kind_d21 import Kind_D21_Service
 from src.modules.kind_d22 import Kind_D22_Service
 from src.modules.kind_d23 import Kind_D23_Service
 from src.modules.kind_d24 import Kind_D24_Service
-from src.helpers import common
+from src.helpers import common, helper
 from tqdm import tqdm
 
 DATA = 'src/data'
@@ -33,8 +33,38 @@ DATA_RULE = 'src/static/korea_rule.json'
 
 def transform_stream(GGSHEET_TITLE, path_data):
     kind_data = common.get_raw_data(f'{DATA}/{path_data}.json')
+    count_questions_check_data = [item["Count questions "] for item in kind_data if item["Count questions "]]
+    lesson_check = kind_data[0]["Lesson "]
+    
+    count_questions_check = helper.check_arrays(count_questions_check_data)
     result_error = {}
+
+    if(not count_questions_check):
+        result_error["count_questions_check"] = {
+            "kind": "All",
+            "unit": "All",
+            "count_questions": "All",
+            "text_question": "All",
+            "error": [90]
+        }
+    if(not lesson_check == path_data.split("_")[1]):
+        result_error["count_questions_check"] = {
+            "kind": "All",
+            "unit": "All",
+            "count_questions": "All",
+            "text_question": "All",
+            "error": [91]
+        }
     for data in tqdm(kind_data):
+        # if (data["kind"].strip() == (Kind.KIND_15.value).strip()):
+        #     kind_d15 = Kind_D15_Service(data)
+        #     result_error[f'kind: {data["kind"]}, count_question: {data["Count questions "]}, text_question: {data["text_question"]}, unit: {data["Unit"]}'] = {
+        #         "kind": data["kind"],
+        #         "unit": data["Unit"],
+        #         "count_questions": data["Count questions "],
+        #         "text_question": data["text_question"],
+        #         "error": kind_d15.run()
+        #     }
         if (data["kind"].strip() == (Kind.KIND_2.value).strip()):
             kind_d2 = Kind_D2_Service(data)
             result_error[f'kind: {data["kind"]}, count_question: {data["Count questions "]}, text_question: {data["text_question"]}, unit: {data["Unit"]}'] = {
@@ -285,7 +315,7 @@ def transform_stream(GGSHEET_TITLE, path_data):
         tmp["content"].split("\n")) > 1]
     common.save_data_to_json(
         result_completed, f'{DATA_ERROR}/{path_data}.json')
-    common.add_sheet_pandas(f'{DATA_ERROR_EXCEL}/{GGSHEET_TITLE}.xlsx',
+    common.add_sheet_pandas(f'{DATA_ERROR_EXCEL}/Check Error {GGSHEET_TITLE}.xlsx',
                             path_data, result_completed)
     # return result_error
     # extract.extract_data()

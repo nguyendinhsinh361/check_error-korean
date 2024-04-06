@@ -12,73 +12,66 @@ class Kind_D13_Service:
     def E13(self, text_question):
         arr_error = []
         if not helper.check_E13_written_by_vietnamese(text_question):
-            arr_error.append(5)
-        if not helper.check_E2_has_tag_p_same(text_question):
-            arr_error.append(90)
+            arr_error.append(6)
+        if not helper.check_E3_has_tag_p_same(text_question):
+            arr_error.append(3)
         if not helper.check_format_tag_p(text_question):
-            arr_error.append(109)
+            arr_error.append(80)
         return arr_error
 
-    def J13(self, audio):
+    def H13(self, audio):
         arr_error = []
-        if not helper.check_E3_written_by_japanese(audio):
-            arr_error.append(69)
-        if helper.check_J3_have_tag_p_or_h(audio):
-            arr_error.append(11)
-        return arr_error
-
-    def L13(self, answer, audio):
-        arr_error = []
-        if not helper.check_E3_written_by_japanese(answer):
-            arr_error.append(71)
-        if not helper.check_L3_has_max_four_answers(answer):
+        if not helper.check_E3_written_by_korean(audio):
+            arr_error.append(13)
+        if helper.check_H3_have_tag_p_or_h(audio):
             arr_error.append(14)
-        if not helper.check_L13_audio_contains_answers(answer, audio):
-            arr_error.append(19)
         return arr_error
 
-    def M13(self, kana_answer, answer):
+    def J13(self, answer, audio):
         arr_error = []
-        if not helper.check_F3_match_column(kana_answer, answer):
+        if not helper.check_E3_written_by_korean(answer):
+            arr_error.append(18)
+        if not helper.check_J3_has_max_four_answers(answer):
+            arr_error.append(19)
+        if not helper.check_J13_audio_contains_answers(answer, audio):
             arr_error.append(26)
         return arr_error
 
-    def N13(self, romanji_answer, kana_answer):
+
+
+    def K13(self, romaja_answer, answer):
         arr_error = []
-        if not helper.check_F3_match_column(romanji_answer, kana_answer):
-            arr_error.append(28)
+        if not helper.check_F3_match_column(romaja_answer, answer):
+            arr_error.append(36)
         return arr_error
 
-    def S13(self, correct_answer, answer, audio):
+    def N13(self, correct_answer, answer, audio):
         arr_error = []
-        if not helper.check_S13_type_number_and_like_number_audio(correct_answer, answer, audio):
-            arr_error.append(32)
+        if not helper.check_N13_type_number_and_like_number_audio(correct_answer, answer, audio):
+            arr_error.append(44)
         return arr_error
 
-    def T13(self, explain, text_question, audio, correct_answer, kana_answer, romanji_answer):
+    def O13(self, explain, text_question, audio, correct_answer, romaja_answer):
         arr_error = []
-        if not helper.check_T9_explain_like_audio(explain, audio):
-            arr_error.append(46)
-        if not helper.check_T2_explain_match_answer_and_kana_answer_type_1(explain, kana_answer, correct_answer):
-            arr_error.append(47)
-        if not helper.check_T2_explain_match_answer_and_romanji_answer_type_1(explain, romanji_answer, correct_answer):
-            arr_error.append(48)
-        if not helper.check_T13_explain_mean_like_text_question_type_1(explain, text_question):
-            arr_error.append(86)
-        arr_error.append(helper.check_T2_brackets(explain))
+        if not helper.check_O9_explain_like_audio(explain, audio):
+            arr_error.append(59)
+        if not helper.check_O2_explain_match_answer_and_romaja_answer_type_1(explain, romaja_answer, correct_answer):
+            arr_error.append(60)
+        if not helper.check_O13_explain_mean_like_text_question_type_1(explain, text_question):
+            arr_error.append(61)
+        arr_error.append(helper.check_O2_brackets(explain))
         return arr_error
 
     def run(self):
         kind_data = self.obj
         arr_error = [
             self.E13(kind_data["text_question"]),
-            self.J13(kind_data["audio"]),
-            self.L13(kind_data["answer"], kind_data["audio"]),
-            self.M13(kind_data["kana_answer"], kind_data["answer"]),
-            self.N13(kind_data["romanji_answer"], kind_data["kana_answer"]),
-            self.S13(kind_data["correct_answer"],
+            self.H13(kind_data["audio"]),
+            self.J13(kind_data["answer"], kind_data["audio"]),
+            self.K13(kind_data["romaja_answer"], kind_data["answer"]),
+            self.N13(kind_data["correct_answer"],
                      kind_data["answer"], kind_data["audio"]),
-            self.T13(kind_data["explain"], kind_data["text_question"], kind_data["audio"],
-                     kind_data["correct_answer"], kind_data["kana_answer"], kind_data["romanji_answer"]),
+            self.O13(kind_data["explain"], kind_data["text_question"], kind_data["audio"],
+                     kind_data["correct_answer"], kind_data["romaja_answer"]),
         ]
         return common.flatten_recursive(arr_error)

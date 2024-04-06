@@ -11,52 +11,38 @@ class Kind_D11_Service:
 
     def E11(self, text_question):
         arr_error = []
-        if not helper.check_E3_written_by_japanese(text_question):
+        if not helper.check_E3_written_by_korean(text_question):
             arr_error.append(2)
-        if not helper.check_E2_has_tag_p_same(text_question):
-            arr_error.append(90)
-        if not helper.check_E11_appear_only_have_one_han_char(text_question):
+        if not helper.check_E3_has_tag_p_same(text_question):
             arr_error.append(3)
+        if not helper.check_E11_appear_only_have_one_han_char(text_question):
+            arr_error.append(4)
         if not helper.check_format_tag_p(text_question):
-            arr_error.append(109)
+            arr_error.append(80)
         return arr_error
 
-    def F11(self, kana_question, text_question):
+    def F11(self, romaja_question, text_question):
         arr_error = []
-        if not helper.check_F3_match_column(kana_question, text_question):
-            arr_error.append(9)
-        if not helper.check_format_tag_p(kana_question):
-            arr_error.append(110)
-        return arr_error
-
-    def G11(self, romaji_question, kana_question):
-        arr_error = []
-        if not helper.check_F3_match_column(romaji_question, kana_question):
+        if not helper.check_F3_match_column(romaja_question, text_question):
             arr_error.append(10)
-        if not helper.check_format_tag_p(romaji_question):
-            arr_error.append(111)
+        if not helper.check_format_tag_p(romaja_question):
+            arr_error.append(80)
         return arr_error
 
-    def H11(self, mean_question):
+    def G11(self, mean_question):
         arr_error = []
         if not helper.check_E13_written_by_vietnamese(mean_question):
-            arr_error.append(70)
-        return arr_error
-
-    def I11(self, hanviet_question):
-        arr_error = []
-        if not helper.check_I11_written_by_capital_vietnamese(hanviet_question):
-            arr_error.append(77)
-        return arr_error
-
-    def J11(self, audio, text_question):
-        arr_error = []
-        if not helper.check_E3_written_by_japanese(audio):
-            arr_error.append(69)
-        if helper.check_J3_have_tag_p_or_h(audio):
-            arr_error.append(11)
-        if not helper.check_J3_like_column(audio, text_question):
             arr_error.append(12)
+        return arr_error
+
+    def H11(self, audio, text_question):
+        arr_error = []
+        if not helper.check_E3_written_by_korean(audio):
+            arr_error.append(13)
+        if helper.check_H3_have_tag_p_or_h(audio):
+            arr_error.append(14)
+        if not helper.check_H3_like_column(audio, text_question):
+            arr_error.append(15)
 
         return arr_error
 
@@ -64,11 +50,8 @@ class Kind_D11_Service:
         kind_data = self.obj
         arr_error = [
             self.E11(kind_data["text_question"]),
-            self.F11(kind_data["kana_question"], kind_data["text_question"]),
-            self.G11(kind_data["romaji_question"], kind_data["kana_question"]),
-            self.H11(kind_data["mean_question"]),
-            self.H11(kind_data["mean_question"]),
-            self.I11(kind_data["hanviet_question"]),
-            self.J11(kind_data["audio"], kind_data["text_question"]),
+            self.F11(kind_data["romaja_question"], kind_data["text_question"]),
+            self.G11(kind_data["mean_question"]),
+            self.H11(kind_data["audio"], kind_data["text_question"]),
         ]
         return common.flatten_recursive(arr_error)

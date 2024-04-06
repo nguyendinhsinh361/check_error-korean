@@ -34,9 +34,9 @@ def contains_latin_or_numbers(text):
 
 def count_han_words(text):
     han_word_count = 0
-
-    for char in text:
-        if is_han(char):
+    clear_text = text.split("[")[0].strip()
+    for char in clear_text:
+        if is_korean(char):
             han_word_count += 1
     return han_word_count
 
@@ -56,6 +56,15 @@ def get_number_tag_p(text):
     count_closing_tags = text.count('</p>')
     return count_opening_tags == count_closing_tags
 
+def get_number_tag_p_for_colum_detail(text):
+    if (not contains_html(text)):
+        return 0
+    # Parse the HTML
+    soup = BeautifulSoup(text, 'html.parser')
+
+    count_closing_tags = text.count('</p>')
+    return count_closing_tags
+
 
 def get_text_from_html(text):
     if (not contains_html(text)):
@@ -67,7 +76,7 @@ def get_text_from_html(text):
     return result
 
 
-def get_text_from_html_romanji(text):
+def get_text_from_html_romaja(text):
     if (not contains_html(text)):
         return text
     # Parse the HTML
@@ -167,6 +176,7 @@ def add_sheet_pandas(filename, sheetname, data):
 
 
 def clean_text(text):
+    text = text.replace(" ", "")
     return text.strip().rstrip("。").rstrip(".").rstrip("?").rstrip("？").upper()
 
 
@@ -175,7 +185,7 @@ def contains_kana(text):
     return bool(re.search(kana_pattern, text))
 
 
-def contains_romaji(text):
+def contains_romaja(text):
     latin_or_special_pattern = re.compile(
         r'^[a-zA-Z0-9!@#$%^&*()_+{}\[\]:;"\'<>,.?/\\|\-~`\s\n]+$')
     return bool(latin_or_special_pattern.match(text))
