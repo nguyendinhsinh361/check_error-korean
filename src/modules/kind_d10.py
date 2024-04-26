@@ -52,8 +52,8 @@ class Kind_D10_Service:
         arr_error = []
         if not helper.check_O9_explain_like_audio(explain, audio):
             arr_error.append(59)
-        # if not helper.check_O10_form_romaja(explain, romaja_answer, correct_answer, answer):
-        #     arr_error.append(57)
+        if not helper.check_O10_form_romaja(explain, romaja_answer, correct_answer, answer):
+            arr_error.append(57)
         if not helper.check_O5_check_mean_vietnamese(explain):
             arr_error.append(58)
         arr_error.append(helper.check_O2_brackets(explain))

@@ -22,21 +22,21 @@ def extract_data():
     worksheets = sheet.worksheets()
     sheet_names = [sheet.title for
                    sheet in worksheets if common.is_number(sheet.title[0]) and (
-                       sheet.title == "81_Học tập (2)" or 
-                       sheet.title == "82_Kế hoạch (2)" or 
-                       sheet.title == "83_Thay đổi" or 
-                       sheet.title == "84_Mối quan hệ (2)" or 
-                       sheet.title == "85_Hỏi thăm" or
-                       sheet.title == "86_Họp mặt" or
-                       sheet.title == "87_Giúp đỡ" or
-                       sheet.title == "88_Kết quả" or
-                       sheet.title == "89_Sức khỏe" or 
-                       sheet.title == "90_Khuyên nhủ" or 
-                       sheet.title == "91_Bệnh tật" or 
-                       sheet.title == "92_Trang phục" or 
-                       sheet.title == "93_Mua sắm" or 
-                       sheet.title == "94_Yêu cầu" or 
-                       sheet.title == "95_Món ăn"
+                       sheet.title == "96_Chế biến món ăn" or 
+                       sheet.title == "97_Tiền tệ" or 
+                       sheet.title == "98_Ngân hàng" or
+                       sheet.title == "99_Tiết kiệm" or 
+                       sheet.title == "100_Du lịch (2)"
+                    #    sheet.title == "86_Họp mặt" or
+                    #    sheet.title == "87_Giúp đỡ" or
+                    #    sheet.title == "88_Kết quả" or
+                    #    sheet.title == "89_Sức khỏe" or 
+                    #    sheet.title == "90_Khuyên nhủ" or 
+                    #    sheet.title == "91_Bệnh tật" or 
+                    #    sheet.title == "92_Trang phục" or 
+                    #    sheet.title == "93_Mua sắm" or 
+                    #    sheet.title == "94_Yêu cầu" or 
+                    #    sheet.title == "95_Món ăn"
                     )]
     chunk_size = 30
     seperate_sheets = [sheet_names[i:i+chunk_size]

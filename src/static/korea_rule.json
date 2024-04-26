@@ -358,5 +358,9 @@
   "91": {
     "column": "Lesson",
     "content": "Phải trùng với tên sheet khi đã bỏ \"STT_\""
+  },
+  "92": {
+    "column": "romaja_question",
+    "content": "Số lượng ngoặc tròn phải bằng với text_question"
   }
 }

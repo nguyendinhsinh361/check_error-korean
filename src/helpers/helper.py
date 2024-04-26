@@ -1,3 +1,4 @@
+from pyparsing import col
 from src.helpers import common
 import re
 from bs4 import BeautifulSoup
@@ -91,6 +92,11 @@ def check_format_tag_p(text):
 
 # Column romaja_question
 
+def check_format_round_brackets(col1, col2):
+    round_brackets_col1 = col1.split("()")
+    round_brackets_col2 = col2.split("()")
+    return round_brackets_col1 == round_brackets_col2
+
 def check_F3_match_column(col1, col2):
     if (not col1):
         return False
@@ -161,7 +167,8 @@ def check_J4_contains_enough_words(col1_answer, col2_correct_ans):
             "\n") if element.strip() != "" and element[0].strip() != "#"]
         words_col2 = [element.strip() for element in col2_correct_ans.split(
             "\n") if element.strip() != "" and element[0].strip() != "#"]
-        return all(element in words_col1 for element in words_col2)
+        contains_all = all(words_col1.count(item) >= words_col2.count(item) for item in words_col2)        
+        return all(element in words_col1 for element in words_col2) and contains_all
     except Exception as e:
         print(col1_answer, col2_correct_ans)
 
@@ -294,12 +301,15 @@ def check_N4_format_combine_sentences(col1_correct_answer):
 
 
 def check_N10_like_audio_question(col1_correct_answer, col2_audio):
-    if (not col1_correct_answer):
+    try:
+        if (not col1_correct_answer):
+            return False
+        words_col1 = [common.remove_special_characters(element.strip()) for element in col1_correct_answer.split(
+            "\n") if element.strip() != ""]
+        words_col1_completed = "".join(words_col1)
+        return common.clean_text(words_col1_completed) == common.clean_text(common.remove_special_characters(col2_audio.replace(" ", "")))
+    except Exception as e:
         return False
-    words_col1 = [common.remove_special_characters(element.strip()) for element in col1_correct_answer.split(
-        "\n") if element.strip() != ""]
-    words_col1_completed = "".join(words_col1)
-    return common.clean_text(words_col1_completed) == common.clean_text(common.remove_special_characters(col2_audio.replace(" ", "")))
 
 
 def check_N13_type_number_and_like_number_audio(col1_correct_answer, col2_answer, col3_audio):

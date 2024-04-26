@@ -1,1 +1,8 @@
-[]
+[
+    {
+        "kind": "Nghe - đọc câu và chọn nghĩa",
+        "unit": "지내다, 정말, 걱정, 괜찮다",
+        "count_questions": 8,
+        "content": "- romaja_question: Khớp với cột text_question\n- text_question: Cấu trúc thẻ p sai\n- explain: Giống với romaja_question (bỏ <p></p> nếu có)\n"
+    }
+]
