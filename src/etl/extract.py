@@ -22,11 +22,11 @@ def extract_data():
     worksheets = sheet.worksheets()
     sheet_names = [sheet.title for
                    sheet in worksheets if common.is_number(sheet.title[0]) and (
-                       sheet.title == "96_Chế biến món ăn" or 
-                       sheet.title == "97_Tiền tệ" or 
-                       sheet.title == "98_Ngân hàng" or
-                       sheet.title == "99_Tiết kiệm" or 
-                       sheet.title == "100_Du lịch (2)"
+                       sheet.title == "100_Du lịch (2)" 
+                    #    sheet.title == "107_Chuyển nhà" or 
+                    #    sheet.title == "108_Nhà cửa (2)" or
+                    #    sheet.title == "109_Thời tiết (2)" or 
+                    #    sheet.title == "110_Tính cách (2)"
                     #    sheet.title == "86_Họp mặt" or
                     #    sheet.title == "87_Giúp đỡ" or
                     #    sheet.title == "88_Kết quả" or

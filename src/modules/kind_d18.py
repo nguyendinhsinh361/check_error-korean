@@ -27,6 +27,8 @@ class Kind_D18_Service:
             arr_error.append(10)
         if not helper.check_format_tag_p(romaja_question):
             arr_error.append(80)
+        if not helper.check_format_round_brackets(romaja_question, text_question):
+            arr_error.append(92)
         return arr_error
 
     def J18(self, answer):

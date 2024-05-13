@@ -1,0 +1,56 @@
+[
+    {
+        "kind": "Nghe - đọc câu và chọn nghĩa",
+        "unit": "나이, 젊다, 넓다, 좁다\n에 비해서",
+        "count_questions": 1,
+        "content": "- explain: Khớp với đáp án tương ứng theo correct answer\n- explain_grammar: Nếu text_question có <p></p> thì phải điền explain_grammar.\n"
+    },
+    {
+        "kind": "Nghe - đọc nghĩa và ghép từ thành câu",
+        "unit": "나이, 젊다, 넓다, 좁다\n에 비해서",
+        "count_questions": 4,
+        "content": "- explain: Khớp với text_question  (bỏ <p></p> nếu có)\n"
+    },
+    {
+        "kind": "Đọc nghĩa - Xem ảnh và ghép chữ cái - phiên âm",
+        "unit": "나이, 젊다, 넓다, 좁다\n에 비해서",
+        "count_questions": 17,
+        "content": "- answer: Không có bất kỳ dấu câu nào\n- romaja_answer: Khớp với cột answer\n- explain: Tương ứng theo correct answer (ghép thành 1 dòng)\n"
+    },
+    {
+        "kind": "Nghe - đọc câu hỏi và ghép câu trả lời",
+        "unit": "나이, 젊다, 넓다, 좁다\n에 비해서",
+        "count_questions": 20,
+        "content": "- audio: Giống với text question (bỏ <p></p> nếu có)\n"
+    },
+    {
+        "kind": "Đọc nghĩa - Xem ảnh và ghép chữ cái - phiên âm",
+        "unit": "더, 덜, 주택, 아파트, 값\n보다",
+        "count_questions": 15,
+        "content": "- answer: Không có bất kỳ dấu câu nào\n- romaja_answer: Khớp với cột answer\n- explain: Tương ứng theo correct answer (ghép thành 1 dòng)\n"
+    },
+    {
+        "kind": "Nghe - đọc câu trả lời và ghép câu hỏi",
+        "unit": "더, 덜, 주택, 아파트, 값\n보다",
+        "count_questions": 20,
+        "content": "- answer: Chứa đủ các từ/cụm từ ở cột correct_answer\n- explain: Số lượng explain bằng số lượng cách ghép\n"
+    },
+    {
+        "kind": "Đọc nghĩa - Xem ảnh và ghép chữ cái - phiên âm",
+        "unit": "Ôn tập",
+        "count_questions": 1,
+        "content": "- answer: Không có bất kỳ dấu câu nào\n- romaja_answer: Khớp với cột answer\n- explain: Tương ứng theo correct answer (ghép thành 1 dòng)\n"
+    },
+    {
+        "kind": "Đọc nghĩa - Xem ảnh và ghép chữ cái - phiên âm",
+        "unit": "Ôn tập",
+        "count_questions": 6,
+        "content": "- answer: Không có bất kỳ dấu câu nào\n- romaja_answer: Khớp với cột answer\n- explain: Tương ứng theo correct answer (ghép thành 1 dòng)\n"
+    },
+    {
+        "kind": "Nghe - đọc câu trả lời và ghép câu hỏi",
+        "unit": "Ôn tập",
+        "count_questions": 9,
+        "content": "- answer: Chứa đủ các từ/cụm từ ở cột correct_answer\n- explain: Số lượng explain bằng số lượng cách ghép\n"
+    }
+]

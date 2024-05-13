@@ -95,7 +95,7 @@ def check_format_tag_p(text):
 def check_format_round_brackets(col1, col2):
     round_brackets_col1 = col1.split("()")
     round_brackets_col2 = col2.split("()")
-    return round_brackets_col1 == round_brackets_col2
+    return len(round_brackets_col1) == len(round_brackets_col2)
 
 def check_F3_match_column(col1, col2):
     if (not col1):
