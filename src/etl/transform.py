@@ -34,7 +34,7 @@ DATA_RULE = 'src/static/korea_rule.json'
 def transform_stream(GGSHEET_TITLE, path_data):
     kind_data = common.get_raw_data(f'{DATA}/{path_data}.json')
     count_questions_check_data = [item["Count questions "] for item in kind_data if item["Count questions "]]
-    lesson_check = kind_data[0]["Lesson "]
+    lesson_check = kind_data[0]["Lesson "] if "Lesson " in kind_data[0] else kind_data[0]["Lesson"]
     
     count_questions_check = helper.check_arrays(count_questions_check_data)
     result_error = {}

@@ -1,0 +1,26 @@
+[
+    {
+        "kind": "Nghe - đọc câu và chọn nghĩa",
+        "unit": "양해, 반드시, 주의하다",
+        "count_questions": 9,
+        "content": "- audio: Giống với text question (bỏ <p></p> nếu có)\n"
+    },
+    {
+        "kind": "Đọc câu - phiên âm và chọn từ điền vào chỗ trống",
+        "unit": "양해, 반드시, 주의하다",
+        "count_questions": 14,
+        "content": "- romaja_question: Số lượng ngoặc tròn phải bằng với text_question\n"
+    },
+    {
+        "kind": "Nghe - đọc nghĩa và ghép từ thành câu",
+        "unit": "화를 내다, 사과하다\n-(ㅇ)ㄴ/는/(으)ㄹ 줄 알다",
+        "count_questions": 4,
+        "content": "- answer: Chứa đủ các từ/cụm từ ở cột correct_answer\n- romaja_answer: Khớp với cột answer\n"
+    },
+    {
+        "kind": "Nghe - đọc câu và chọn nghĩa",
+        "unit": "화를 내다, 사과하다\n-(ㅇ)ㄴ/는/(으)ㄹ 줄 알다",
+        "count_questions": 9,
+        "content": "- romaja_question: Khớp với cột text_question\n- text_question: Cấu trúc thẻ p sai\n- explain: Giống với romaja_question (bỏ <p></p> nếu có)\n"
+    }
+]

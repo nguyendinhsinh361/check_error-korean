@@ -22,21 +22,21 @@ def extract_data():
     worksheets = sheet.worksheets()
     sheet_names = [sheet.title for
                    sheet in worksheets if common.is_number(sheet.title[0]) and (
-                       sheet.title == "100_Du lịch (2)" 
-                    #    sheet.title == "107_Chuyển nhà" or 
-                    #    sheet.title == "108_Nhà cửa (2)" or
-                    #    sheet.title == "109_Thời tiết (2)" or 
-                    #    sheet.title == "110_Tính cách (2)"
-                    #    sheet.title == "86_Họp mặt" or
-                    #    sheet.title == "87_Giúp đỡ" or
-                    #    sheet.title == "88_Kết quả" or
-                    #    sheet.title == "89_Sức khỏe" or 
-                    #    sheet.title == "90_Khuyên nhủ" or 
-                    #    sheet.title == "91_Bệnh tật" or 
-                    #    sheet.title == "92_Trang phục" or 
-                    #    sheet.title == "93_Mua sắm" or 
-                    #    sheet.title == "94_Yêu cầu" or 
-                    #    sheet.title == "95_Món ăn"
+                    #    sheet.title == "140_Tình cảm" or
+                    #    sheet.title == "139_Hồi tưởng" or 
+                    #    sheet.title == "138_Cảm xúc" or 
+                    #    sheet.title == "137_Thiên tai" or 
+                    #    sheet.title == "136_Thể gây khiến" or 
+                    #    sheet.title == "135_Đồ dùng trong nhà" or 
+                    #    sheet.title == "134_Việc nhà" or 
+                    #    sheet.title == "133_Thịnh hành" or 
+                    #    sheet.title == "132_Làm đẹp" or 
+                    #    sheet.title == "131_Thời trang" or 
+                    #    sheet.title == "130_Trao đổi ý kiến"
+                       
+                       sheet.title == "141_Sinh hoạt hàng ngày" or 
+                       sheet.title == "142_Phân loại rác" or 
+                       sheet.title == "143_Cư trú"
                     )]
     chunk_size = 30
     seperate_sheets = [sheet_names[i:i+chunk_size]

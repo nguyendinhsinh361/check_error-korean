@@ -1,0 +1,26 @@
+[
+    {
+        "kind": "Nghe - đọc câu hỏi và chọn câu trả lời",
+        "unit": "갈등, 원인, 겪다, 해결하다, 극복하다",
+        "count_questions": 22,
+        "content": "- audio: Giống với text question (bỏ <p></p> nếu có)\n"
+    },
+    {
+        "kind": "Nghe và ghép từ thành câu",
+        "unit": "갈등, 원인, 겪다, 해결하다, 극복하다",
+        "count_questions": 24,
+        "content": "- answer: Chứa đủ các từ/cụm từ ở cột correct_answer\n"
+    },
+    {
+        "kind": "Nghe và ghép từ thành câu",
+        "unit": "Ôn tập",
+        "count_questions": 4,
+        "content": "- answer: Chứa đủ các từ/cụm từ ở cột correct_answer\n"
+    },
+    {
+        "kind": "Nghe - đọc câu hỏi và chọn câu trả lời",
+        "unit": "Ôn tập",
+        "count_questions": 5,
+        "content": "- audio: Giống với text question (bỏ <p></p> nếu có)\n"
+    }
+]

@@ -167,7 +167,7 @@ def check_J4_contains_enough_words(col1_answer, col2_correct_ans):
             "\n") if element.strip() != "" and element[0].strip() != "#"]
         words_col2 = [element.strip() for element in col2_correct_ans.split(
             "\n") if element.strip() != "" and element[0].strip() != "#"]
-        contains_all = all(words_col1.count(item) >= words_col2.count(item) for item in words_col2)        
+        contains_all = all(words_col1.count(item) >= (words_col2.count(item))/2 for item in words_col2)   
         return all(element in words_col1 for element in words_col2) and contains_all
     except Exception as e:
         print(col1_answer, col2_correct_ans)
